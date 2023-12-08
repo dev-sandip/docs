@@ -1,0 +1,14 @@
+@import url("https://fonts.cdnfonts.com/css/gilroy-bold?styles=20880");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: Gilroy, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+::selection {
+  color: rgb(232, 145, 47);
+}
