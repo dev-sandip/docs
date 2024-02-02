@@ -2,23 +2,23 @@ import { FaRegFileAlt } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
 import { motion } from "framer-motion";
-import PropTypes from "prop-types";
 
-const Card = ({ data, reference }) => {
-  Card.propTypes = {
-    data: PropTypes.shape({
-      desc: PropTypes.string.isRequired,
-      filesize: PropTypes.string.isRequired,
-      close: PropTypes.bool.isRequired,
-      tag: PropTypes.shape({
-        isOpen: PropTypes.bool.isRequired,
-        tagTitle: PropTypes.string.isRequired,
-        tagColor: PropTypes.string.isRequired,
-      }).isRequired,
-    }).isRequired,
-    reference: PropTypes.object.isRequired,
+//props
+interface CardProps {
+  data: {
+    desc: string;
+    filesize: string;
+    close: boolean;
+    tag: {
+      isOpen: boolean;
+      tagTitle: string;
+      tagColor: string;
+    };
   };
+  reference: any; // Replace 'any' with the appropriate type for the 'reference' property.
+}
 
+const Card = ({ data, reference }: CardProps) => {
   return (
     <motion.div
       drag
